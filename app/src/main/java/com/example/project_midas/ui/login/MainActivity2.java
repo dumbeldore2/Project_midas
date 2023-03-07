@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.project_midas.MainActivity3;
 import com.example.project_midas.R;
 import com.example.project_midas.ui.login.LoginViewModel;
 import com.example.project_midas.ui.login.LoginViewModelFactory;
@@ -126,6 +128,10 @@ public class MainActivity2 extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //voor dat security is geregeld
+                Intent intent = new Intent(getApplicationContext(), MainActivity3.class);
+                startActivity(intent);
+
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
