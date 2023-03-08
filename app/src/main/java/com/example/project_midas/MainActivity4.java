@@ -3,6 +3,7 @@ package com.example.project_midas;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 public class MainActivity4 extends AppCompatActivity {
 
@@ -10,5 +11,13 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        //view functies
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.black));
+        getWindow().setStatusBarColor(getResources().getColor(R.color.black));
+
     }
 }
